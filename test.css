@@ -1,0 +1,663 @@
+/* --- STYLES GÉNÉRAUX --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #87CEEB; /* Bleu Ciel */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- EN-TÊTE (HEADER) --- */
+.header-container {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo à gauche */
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+/* Titre centré */
+.header-container h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* --- ICÔNES RESEAUX SOCIAUX --- */
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px; 
+    min-width: 90px;
+}
+
+.social-link {
+    text-decoration: none !important;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.facebook-icon {
+    font-size: 36px;
+    color: #1877F2;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.youtube-official-icon {
+    width: 42px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.social-link:hover .facebook-icon,
+.social-link:hover .youtube-official-icon {
+    transform: scale(1.15);
+}
+
+/* --- BARRE DE NAVIGATION --- */
+nav {
+    background-color: #333;
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+nav a.active {
+    background-color: #4CAF50;
+    font-weight: bold;
+}
+
+/* --- CONTENU PRINCIPAL & SECTIONS --- */
+main {
+    padding: 0;
+    padding-bottom: 60px;
+    background-color: #87CEEB; /* Bleu Ciel */
+}
+
+.page-section {
+    display: none;
+    background-color: #87CEEB; /* Bleu Ciel */
+    color: #000000;
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+.page-section h2 {
+    margin-top: 0; /* Évite tout vide en haut */
+}
+
+.page-section.active-section {
+    display: block !important;
+}
+/* --- DISPOSITION DU BLOC CONTACT --- */
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Sur mobile : les uns sous les autres */
+    gap: 25px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* CARTES DU CONTACT (INFOS ET FORMULAIRE) */
+.contact-info, .contact-form-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    color: #333333;
+}
+
+.contact-info h3, .contact-form-card h3 {
+    margin-top: 0;
+    color: #0d6efd;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* ÉLÉMENTS DE COORDONNÉES */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    color: #0d6efd;
+    margin-top: 3px;
+}
+
+.info-item a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+/* CHAMPS DU FORMULAIRE (OPTIMISÉS TACTILE ANDROID) */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem; /* Empêche le zoom automatique gênant sur Chrome Android */
+    box-sizing: border-radius;
+}
+
+/* BOUTON D'ENVOI */
+.btn-submit {
+    width: 100%;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0b5ed7;
+}
+
+/* --- ADAPTATION POUR GRAND ÉCRAN (PC / TABLETTE) --- */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row; /* Côte à côte sur PC */
+    }
+    
+    .contact-info {
+        flex: 1;
+    }
+    
+    .contact-form-card {
+        flex: 1.5;
+    }
+}
+
+/* --- STYLE ET DISPOSITION DES VIDÉOS --- */
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.video-card {
+    background-color: rgba(255, 255, 255, 0.4); /* Carte semi-transparente */
+    padding: 15px;
+    border-radius: 12px;
+    width: 300px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.media-video {
+    width: 100%;
+    height: 220ox;
+    border-radius: 8px;
+    outline: none;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* --- SECTION CONTACT --- */
+.contact-container {
+    display: flex;
+    flex-wrap: column;
+    gap: 20px;
+    width: 100%;
+}
+/* Ajustement pour les grands écrans */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row; /* Remet côte à côte sur ordinateur */
+    }
+}
+/* Forcer l'affichage de la section quand elle est active */
+#contact.active-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Cartes d'information et de formulaire */
+.contact-info, 
+.contact-form-card {
+    background-color: rgba(255, 255, 255, 0.6); /* Fond blanc semi-transparent */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3, 
+.contact-form-card h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* Style des lignes d'informations */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    width: 30px;
+    text-align: center;
+}
+
+.info-item p {
+    margin: 3px 0 0 0;
+    color: #555;
+}
+
+/* Style du Formulaire */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Évite que les inputs ne dépassent de la carte */
+    font-family: inherit;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+/* Bouton d'envoi */
+.btn-submit {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+/* --- MESSAGES DE CONFIRMATION / ERREUR --- */
+.form-status {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Masqué par défaut */
+}
+
+/* Style de succès (Vert) */
+.form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Style d'erreur (Rouge) */
+.form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+/* --- ACCUEIL : HERO SECTION --- */
+.hero-block {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hero-block h2 {
+    font-size: 2rem;
+    color: #1b4332;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* --- ACCUEIL : CARTES DE SERVICES --- */
+.features-section {
+    margin: 40px 0;
+}
+
+.features-section h3 {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.feature-card h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* --- ACCUEIL : BANNIÈRE CTA --- */
+.cta-banner {
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cta-banner h3 {
+    margin: 0 0 10px 0;
+    color: #4CAF50;
+}
+
+.cta-banner p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+/* --- AMÉLIORATIONS SECTION À PROPOS --- */
+
+/* Texte d'accroche */
+.about-hero {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+.about-lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #1a252f;
+}
+
+/* Grille Objectifs & Expertise */
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 950px;
+    margin: 0 auto 35px auto;
+}
+
+.about-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.about-card:hover {
+    transform: translateY(-3px);
+}
+
+.about-icon {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.about-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/* Badges / Tags des Logiciels */
+.software-tags-container {
+    margin: 30px 0 40px 0;
+}
+
+.software-tags-container h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.software-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tag {
+    background-color: #333;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.tag i {
+    color: #4CAF50;
+}
+
+/* Entête du bloc Vidéo */
+.video-section-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.video-section-header h3 {
+    font-size: 1.5rem;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+/* Alignement des cartes vidéo avec en-tête d'icône */
+.video-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    height: 40px; /* Égalise la hauteur du titre */
+}
+
+.video-header i {
+    font-size: 1.3rem;
+    color: #4CAF50;
+}
+
+.video-header h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #222;
+    text-align: center;
+}

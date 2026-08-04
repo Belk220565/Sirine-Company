@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. Favicon corrigé -->
+    <link rel="icon" type="image/png" href="Images/Mon logo1.png">
+
+    <title>Page web de Sirine Company</title>
+
+    <!-- Charge la librairie d'icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Liaison avec le fichier CSS externe -->
+    <link rel="stylesheet" href="test.css" />
+</head>
+
+<body>
+
+    <!-- Bandeau En-tête -->
+    <header class="header-container">
+        <!-- 1. Logo à l'extrême gauche -->
+        <img src="Images/Mon logo.jpg" alt="Logo Sirine Company" class="logo" />
+
+        <!-- 2. Titre centré au milieu -->
+        <h1>Bienvenue sur Sirine Company page web</h1>
+
+        <!-- 3. Bloc d'icônes sociales à l'extrême droite -->
+        <div class="social-icons">
+            <!-- Icône Facebook -->
+    
+            <a href="https://www.facebook.com/Sirine Company" target="_blank" class="social-link"
+                title="Visitez notre page Facebook">
+                <i class="fa-brands fa-facebook facebook-icon"></i>
+            </a>
+
+            <!-- Logo YouTube Officiel (SVG) -->
+            <a href="https://www.youtube.com/@sirinecompany2205" target="_blank" class="social-link"
+                title="Visitez notre chaîne YouTube">
+                <svg class="youtube-official-icon" viewBox="0 0 68 48">
+                    <path fill="#FF0000"
+                        d="M66.52 7.74c-.78-2.93-2.49-5.24-5.42-6.02C55.79.13 34 0 34 0S12.21.13 6.9 1.72c-2.93.78-4.64 3.09-5.42 6.02C0 13.06 0 24 0 24s0 10.94 1.48 16.26c.78 2.93 2.49 5.24 5.42 6.02C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.72c2.93-.78 4.64-3.09 5.42-6.02C68 34.94 68 24 68 24s0-10.94-1.48-16.26z" />
+                    <path fill="#FFFFFF" d="M45 24L27 14v20z" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Barre de Navigation -->
+    <nav>
+        <a href="javascript:void(0)" class="nav-btn active" onclick="showSection('home', this)">Accueil</a>
+        <a href="javascript:void(0)" class="nav-btn" onclick="showSection('about', this)">À propos</a>
+        <a href="javascript:void(0)" class="nav-btn" onclick="showSection('contact', this)">Contact</a>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main>
+        <!-- Section 1 : Accueil -->
+        <section id="home" class="page-section active-section">
+
+            <!-- 1. BANDEAU D'ACCROCHE (HERO SECTION) -->
+            <div class="hero-block">
+                <h2>Des logiciels de bureau performants pour votre entreprise</h2>
+                <p class="hero-subtitle">Sirine Company conçoit des solutions informatiques sur mesure pour optimiser
+                    votre gestion et booster votre productivité au quotidien.</p>
+                <div class="hero-buttons">
+                    <a href="javascript:void(0)" class="btn-primary"
+                        onclick="showSection('about', document.querySelectorAll('nav a')[1])">
+                        <i class="fa-solid fa-circle-play"></i> Voir nos démos vidéos
+                    </a>
+                    <a href="javascript:void(0)" class="btn-secondary"
+                        onclick="showSection('contact', document.querySelectorAll('nav a')[2])">
+                        <i class="fa-solid fa-paper-plane"></i> Nous contacter
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. NOS POINTS FORTS / SERVICES -->
+            <div class="features-section">
+                <h3>Pourquoi choisir Sirine Company ?</h3>
+                <div class="features-grid">
+
+                    <div class="feature-card">
+                        <i class="fa-solid fa-desktop feature-icon"></i>
+                        <h4>Logiciels Sur Mesure</h4>
+                        <p>Des applications bureautiques ergonomiques conçues pour répondre spécifiquement aux besoins
+                            de votre secteur d'activité.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fa-solid fa-shield-halved feature-icon"></i>
+                        <h4>Sécurité & Fiabilité</h4>
+                        <p>Une protection maximale de vos données et un fonctionnement fluide, même sans connexion
+                            internet permanente.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fa-solid fa-headset feature-icon"></i>
+                        <h4>Accompagnement & Support</h4>
+                        <p>Une équipe disponible pour l'installation, la formation de vos collaborateurs et la
+                            maintenance de vos logiciels.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 3. BANNIÈRE APPEL À L'ACTION -->
+            <div class="cta-banner">
+                <h3>Prêt à moderniser votre gestion ?</h3>
+                <p>Découvrez nos solutions phares comme <strong>MaSanté</strong> et <strong>Gest-Com</strong>.</p>
+            </div>
+
+        </section>
+
+        <!-- Section 2 : À propos -->
+        <section id="about" class="page-section">
+            <h2>À propos de Sirine Company</h2>
+
+            <!-- BLOC D'ACCROCHE & PRÉSENTATION -->
+            <div class="about-hero">
+                <p class="about-lead">
+                    <strong>Sirine Company</strong> est un groupe dynamique spécialisé dans la conception et le
+                    développement de <strong>logiciels de bureau sur mesure</strong>. Nous accompagnons les
+                    professionnels et les entreprises dans la numérisation de leurs activités en leur offrant des
+                    solutions informatiques simples, rapides et hautement sécurisées.
+                </p>
+            </div>
+
+            <!-- CARTE NOS VALEURS & OBJECTIFS -->
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fa-solid fa-bullseye about-icon"></i>
+                    <h3>Notre Objectif</h3>
+                    <p>Vous fournir des outils performants pour automatiser vos tâches quotidiennes, optimiser la
+                        gestion de vos données et booster la productivité de vos équipes.</p>
+                </div>
+
+                <div class="about-card">
+                    <i class="fa-solid fa-layer-group about-icon"></i>
+                    <h3>Nos Domaines d'Expertise</h3>
+                    <p>Gestion commerciale, suivi médical, restauration, établissement scolaire, stations-services et
+                        boutiques spécialisées.</p>
+                </div>
+            </div>
+
+            <!-- BADGES DE NOS LOGICIELS PHARES -->
+            <div class="software-tags-container">
+                <h3>Nos Solutions Phares</h3>
+                <div class="software-tags">
+                    <span class="tag"><i class="fa-solid fa-notes-medical"></i> MaSanté</span>
+                    <span class="tag"><i class="fa-solid fa-chart-line"></i> Gest-Com</span>
+                    <span class="tag"><i class="fa-solid fa-mug-hot"></i> Mon Café</span>
+                    <span class="tag"><i class="fa-solid fa-graduation-cap"></i> Madrassati</span>
+                    <span class="tag"><i class="fa-solid fa-gas-pump"></i> Station Service</span>
+                    <span class="tag"><i class="fa-solid fa-user-doctor"></i> Cabinet Médical</span>
+                </div>
+            </div>
+
+            <!-- BLOC DES VIDÉOS (GRILLE DE 3 COLONNES) -->
+            <div class="videos-container">
+
+                <!-- Vidéo 1 : MaSanté -->
+                <div class="video-card">
+                    <div class="video-header">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <h3>MaSanté</h3>
+                    </div>
+                    <iframe class="media-video" src="https://www.youtube.com/embed/glCXozWW8Yk" title="Démo MaSanté"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Vidéo 2 : Gest-Com -->
+                <div class="video-card">
+                    <div class="video-header">
+                        <i class="fa-solid fa-boxes-packing"></i>
+                        <h3>Gest-Com</h3>
+                    </div>
+                    <iframe class="media-video" src="https://www.youtube.com/embed/iT7-ODmxlV0" title="Démo Gest-Com"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Vidéo 3 : Gestion Café -->
+                <div class="video-card">
+                    <div class="video-header">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                        <h3>Gestion Café</h3>
+                    </div>
+                    <iframe class="media-video" src="https://www.youtube.com/embed/6u1-uT2zyqE"
+                        title="Démo Gestion Café" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Vidéo 4 : Cabinet Médical -->
+                <div class="video-card">
+                    <div class="video-header">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <h3>Cabinet Médical</h3>
+                    </div>
+                    <iframe class="media-video" src="https://www.youtube.com/embed/5V6JU08UKBc"
+                        title="Démo Cabinet Médical" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Vidéo 5 : Boutique Smartphones -->
+                <div class="video-card">
+                    <div class="video-header">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h3>Boutique Smartphones & Informatique</h3>
+                    </div>
+                    <iframe class="media-video" src="https://www.youtube.com/embed/-DiCKuohcYY" title="Démo Boutique"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+        </section> <!-- FERMETURE DE LA SECTION À PROPOS ICI -->
+
+        <!-- Section 3 : Contact -->
+        <section id="contact" class="page-section">
+            <div class="section-title-container">
+                <h2>Contactez-nous</h2>
+                <p>Une question sur nos logiciels ou besoin d'un devis ? N'hésitez pas à nous laisser un message !</p>
+            </div>
+
+            <div class="contact-container">
+
+                <!-- Bloc 1 : Informations de contact -->
+                <div class="contact-info">
+                    <h3>Nos Coordonnées</h3>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email :</strong>
+                            <p><a href="mailto:aliselmi24@hotmail.fr">aliselmi24@hotmail.fr</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Téléphone :</strong>
+                            <p><a href="tel:+213661365501">+213 (0) 661 36 55 01</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Adresse :</strong>
+                            <p>N° 08 Rue du 1er Novembre 1954 Belkheir, Guelma, Algérie</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Horaires :</strong>
+                            <p>Dimanche - Jeudi : 08h30 - 16h30</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloc 2 : Formulaire de message -->
+                <div class="contact-form-card">
+                    <h3>Envoyez-nous un message</h3>
+                    <form action="https://formspree.io/f/xpqveebo" method="POST" id="contact-form" class="contact-form">
+
+                        <div class="form-group">
+                            <label for="name">Nom complet :</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse Email :</label>
+                            <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet :</label>
+                            <input type="text" id="subject" name="subject" placeholder="Ex: Renseignement sur Gest-Com"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message :</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Écrivez votre message ici..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn-submit">Envoyer le message</button>
+
+                        <!-- Zone d'affichage du message de confirmation / erreur -->
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 Sirine Company. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Fichier JS externe -->
+    <script src="test.js"></script>
+
+</body>
+
+</html>
